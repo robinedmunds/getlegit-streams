@@ -12,7 +12,7 @@
     "video.js": "^7.19.2"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.6.0",
+    "@parcel/transformer-sass": "2.6.1",
     "buffer": "^6.0.3"
   }
 }
