@@ -8,4 +8,6 @@ RUN pip install --no-cache-dir gunicorn
 
 COPY . .
 
-RUN [ "gunicorn", "--bind=127.0.0.1:5000", "--workers=1", "auth:app" ]
+EXPOSE 5000/tcp
+
+CMD [ "gunicorn", "--bind=0.0.0.0:5000", "--workers=1", "auth:app" ]
