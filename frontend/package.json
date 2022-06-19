@@ -1,0 +1,18 @@
+{
+  "name": "getlegit-stream",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "parcel": "^2.6.0",
+    "video.js": "^7.19.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.6.0",
+    "buffer": "^6.0.3"
+  }
+}

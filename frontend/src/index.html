@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streams - GETLEGIT!</title>
+  <link rel="stylesheet" href="styles.scss" />
+</head>
+<body>
+
+  <div class="container">
+    <img src="../static/img/getlegit-logo.svg" alt="GETLEGIT!" class="logo">
+
+    <h1 class="title">Streams</h1>
+
+    <h2 class="header">Channel 1</h2>
+
+    <video width="1280" height="720" controls id="player-one" class="video-js" data-setup='{"liveui": true}'>
+    <source src="http://docker.local:17249/live/one.m3u8" type="application/vnd.apple.mpegurl">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">
+          supports HTML5 video
+        </a>
+      </p>
+    </video>
+
+
+    <h2 class="header">Channel 2</h2>
+
+    <video width="1280" height="720" controls id="player-two" class="video-js" data-setup='{"liveui": true}'>
+      <source src="http://docker.local:17249/live/two.m3u8" type="application/vnd.apple.mpegurl">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">
+          supports HTML5 video
+        </a>
+      </p>
+    </video>
+
+
+    <h2 class="header">Channel 3</h2>
+
+    <video width="1280" height="720" controls id="player-three" class="video-js" data-setup='{"liveui": true}'>
+      <source src="http://docker.local:17249/live/three.m3u8" type="application/vnd.apple.mpegurl">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">
+          supports HTML5 video
+        </a>
+      </p>
+</video>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
