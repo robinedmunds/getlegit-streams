@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  rtmp:
+    image: alfg/nginx-rtmp
+    ports:
+      - 8080:80
+      - 1935:1935
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf.template
+
+  auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+
