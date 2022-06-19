@@ -1,5 +1,7 @@
 FROM node:lts-alpine AS build
 
+ENV NODE_ENV=development
+
 WORKDIR /usr/src/app
 
 COPY ./package.json .
