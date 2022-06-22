@@ -4,10 +4,8 @@ from flask import Flask, request, abort, make_response
 
 
 app = Flask(__name__)
-credentials = {
-    "users": getenv("CREDENTIALS_USERS"),
-    "key": getenv("CREDENTIALS_KEY")
-}
+
+USERNAMES = ["one", "two", "three", "four"]
 
 
 @app.route("/auth")
@@ -19,13 +17,16 @@ def auth():
     idhash = request.args.get("swfurl").split("?")[-1]
     print(f"USERNAME: {username} -- IDHASH: {idhash}")
 
-    # TODO: store usernames and key in env vars
-    if username in ["one", "two", "three", "four"]:
-        if idhash == "biglongpassword":
+    if username in USERNAMES:
+        if idhash == getenv("AUTH_STREAM_KEY"):
             return "OK", HTTPStatus.OK
 
     abort(HTTPStatus.UNAUTHORIZED)
 
 
 if __name__ == "__main__":
+    if getenv("AUTH_STREAM_KEY") is None:
+        raise Exception(
+            "Must set global stream key as environment variable, " +
+            "AUTH_STREAM_KEY")
     app.run()
